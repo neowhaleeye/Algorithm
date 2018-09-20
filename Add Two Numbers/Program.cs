@@ -10,41 +10,48 @@ namespace Add_Two_Numbers
     {
         static void Main(string[] args)
         {
-            AddTwoNumbers(new ListNode(2) { next = new ListNode(4) { next = new ListNode(3) } },
+            var result = AddTwoNumbers(new ListNode(2) { next = new ListNode(4) { next = new ListNode(3) } },
                 new ListNode(5) { next = new ListNode(6) { next = new ListNode(4) } });
         }
 
         public static ListNode AddTwoNumbers(ListNode l1, ListNode l2)
         {
+            //do Recursive
+            //assign param to temp variables to do recursive operation.
+
             ListNode c1 = l1;
             ListNode c2 = l2;
-            ListNode sentinel = new ListNode(0);
-            ListNode d = sentinel;
+            ListNode result = new ListNode(0);
+            ListNode r = result;
             int sum = 0;
 
-            while (c1 != null || c2 != null)
+            while(c1 != null && c2 != null)
             {
-                sum /= 10;
-                if (c1 != null)
+                int carry = sum / 10;
+                sum = carry;
+
+                if(c1 != null)
                 {
                     sum += c1.val;
                     c1 = c1.next;
                 }
-                if (c2 != null)
+
+                if(c2 != null)
                 {
                     sum += c2.val;
                     c2 = c2.next;
                 }
-                d.next = new ListNode(sum % 10);
-                d = d.next;
+
+                r.next = new ListNode(sum % 10);
+                r = r.next;
             }
 
-            if(sum/10 ==1)
+            if(sum / 10 ==1)
             {
-                d.next = new ListNode(1);
+                r.next = new ListNode(1);
             }
 
-            return sentinel.next ;
+            return result.next;
         }
     }
 

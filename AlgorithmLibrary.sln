@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reverse Words in a String I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Two Sum", "Two Sum\Two Sum.csproj", "{4329D8A4-B4F0-4533-B75B-67657BE2D2F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merge k Sorted Lists", "Merge k Sorted Lists\Merge k Sorted Lists.csproj", "{2A664A56-671E-4DA4-AFFF-515EFC49E98C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{4329D8A4-B4F0-4533-B75B-67657BE2D2F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4329D8A4-B4F0-4533-B75B-67657BE2D2F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4329D8A4-B4F0-4533-B75B-67657BE2D2F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A664A56-671E-4DA4-AFFF-515EFC49E98C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A664A56-671E-4DA4-AFFF-515EFC49E98C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A664A56-671E-4DA4-AFFF-515EFC49E98C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A664A56-671E-4DA4-AFFF-515EFC49E98C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

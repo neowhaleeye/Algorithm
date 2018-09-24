@@ -10,7 +10,8 @@ namespace Prime_Number_of_Set_Bits_in_Binary_Representation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(CountPrimeSetBits(6, 10));
+            IsPrime(125);
+            //Console.WriteLine(CountPrimeSetBits(6, 125));
         }
 
         public static int CountPrimeSetBits(int L, int R)
@@ -34,6 +35,7 @@ namespace Prime_Number_of_Set_Bits_in_Binary_Representation
 
         public static bool IsPrime(int candidate)
         {
+           
             // Test whether the parameter is a prime number.
             if ((candidate & 1) == 0)
             {

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2026
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product of Array Except Self", "Product of Array Except Self\Product of Array Except Self.csproj", "{F7A9439D-0332-445A-965C-A6646DE174BB}"
 EndProject
@@ -24,6 +24,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maximum Length of Pair Chain", "Maximum Length of Pair Chain\Maximum Length of Pair Chain.csproj", "{C624B2DE-B2F7-4DD8-81E1-0C7206DC0196}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compare Version Numbers", "Compare Version Numbers\Compare Version Numbers.csproj", "{EB6A28D2-2ADE-42D5-A2DB-6B3B2EDE3BA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integer to English Words", "Integer to English Words\Integer to English Words.csproj", "{58A50B64-57CF-4706-AD36-6EC0A57E319D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Longest Palindromic Substring", "Longest Palindromic Substring\Longest Palindromic Substring.csproj", "{072CE7F1-E26B-4C1F-BB3C-DFB274DE2C1E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +79,14 @@ Global
 		{EB6A28D2-2ADE-42D5-A2DB-6B3B2EDE3BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB6A28D2-2ADE-42D5-A2DB-6B3B2EDE3BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB6A28D2-2ADE-42D5-A2DB-6B3B2EDE3BA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58A50B64-57CF-4706-AD36-6EC0A57E319D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58A50B64-57CF-4706-AD36-6EC0A57E319D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58A50B64-57CF-4706-AD36-6EC0A57E319D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58A50B64-57CF-4706-AD36-6EC0A57E319D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{072CE7F1-E26B-4C1F-BB3C-DFB274DE2C1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{072CE7F1-E26B-4C1F-BB3C-DFB274DE2C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{072CE7F1-E26B-4C1F-BB3C-DFB274DE2C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{072CE7F1-E26B-4C1F-BB3C-DFB274DE2C1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

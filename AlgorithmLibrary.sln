@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product of Array Except Self", "Product of Array Except Self\Product of Array Except Self.csproj", "{F7A9439D-0332-445A-965C-A6646DE174BB}"
 EndProject
@@ -28,6 +28,26 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integer to English Words", "Integer to English Words\Integer to English Words.csproj", "{58A50B64-57CF-4706-AD36-6EC0A57E319D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Longest Palindromic Substring", "Longest Palindromic Substring\Longest Palindromic Substring.csproj", "{072CE7F1-E26B-4C1F-BB3C-DFB274DE2C1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validate Binary Search Tree", "Validate Binary Search Tree\Validate Binary Search Tree.csproj", "{C391AFFA-A437-4156-8E87-E0433A7AD0E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon1", "Amazon1\Amazon1.csproj", "{9435B5D7-FEF3-4E31-8E96-2CE0C6244862}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon2", "Amazon2\Amazon2.csproj", "{B7CFA170-8311-41FF-ABE6-BC7EA4CE6CF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binary Tree Preorder Traversal", "Binary Tree Preorder Traversal\Binary Tree Preorder Traversal.csproj", "{8941CA77-9524-4F9F-AA60-628C393BB01F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binary Tree Inorder Traversal", "Binary Tree Inorder Traversal\Binary Tree Inorder Traversal.csproj", "{E9CF2705-92AA-4172-A862-1B7D194A4457}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binary Tree Postorder Traversal", "Binary Tree Postorder Traversal\Binary Tree Postorder Traversal.csproj", "{EEAC27CB-5E85-413C-AF4B-0B04EDAF1F75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binary Tree Level Order Traversal", "Binary Tree Level Order Traversal\Binary Tree Level Order Traversal.csproj", "{AFA020C2-90E2-44C8-8A0F-F564C1F354F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maximum Depth of Binary Tree", "Maximum Depth of Binary Tree\Maximum Depth of Binary Tree.csproj", "{12962591-353C-4907-A5C6-B57AA832FC10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BinaryTree", "BinaryTree", "{6326046A-4DD8-451E-9616-439CBC8BCAB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Symmetric Tree", "Symmetric Tree\Symmetric Tree.csproj", "{ACBE8C96-353D-4735-861A-268B3AFFB72B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,9 +107,52 @@ Global
 		{072CE7F1-E26B-4C1F-BB3C-DFB274DE2C1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{072CE7F1-E26B-4C1F-BB3C-DFB274DE2C1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{072CE7F1-E26B-4C1F-BB3C-DFB274DE2C1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C391AFFA-A437-4156-8E87-E0433A7AD0E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C391AFFA-A437-4156-8E87-E0433A7AD0E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C391AFFA-A437-4156-8E87-E0433A7AD0E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C391AFFA-A437-4156-8E87-E0433A7AD0E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9435B5D7-FEF3-4E31-8E96-2CE0C6244862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9435B5D7-FEF3-4E31-8E96-2CE0C6244862}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9435B5D7-FEF3-4E31-8E96-2CE0C6244862}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9435B5D7-FEF3-4E31-8E96-2CE0C6244862}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7CFA170-8311-41FF-ABE6-BC7EA4CE6CF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7CFA170-8311-41FF-ABE6-BC7EA4CE6CF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7CFA170-8311-41FF-ABE6-BC7EA4CE6CF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7CFA170-8311-41FF-ABE6-BC7EA4CE6CF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8941CA77-9524-4F9F-AA60-628C393BB01F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8941CA77-9524-4F9F-AA60-628C393BB01F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8941CA77-9524-4F9F-AA60-628C393BB01F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8941CA77-9524-4F9F-AA60-628C393BB01F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9CF2705-92AA-4172-A862-1B7D194A4457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9CF2705-92AA-4172-A862-1B7D194A4457}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9CF2705-92AA-4172-A862-1B7D194A4457}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9CF2705-92AA-4172-A862-1B7D194A4457}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEAC27CB-5E85-413C-AF4B-0B04EDAF1F75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEAC27CB-5E85-413C-AF4B-0B04EDAF1F75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEAC27CB-5E85-413C-AF4B-0B04EDAF1F75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEAC27CB-5E85-413C-AF4B-0B04EDAF1F75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFA020C2-90E2-44C8-8A0F-F564C1F354F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFA020C2-90E2-44C8-8A0F-F564C1F354F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFA020C2-90E2-44C8-8A0F-F564C1F354F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFA020C2-90E2-44C8-8A0F-F564C1F354F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12962591-353C-4907-A5C6-B57AA832FC10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12962591-353C-4907-A5C6-B57AA832FC10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12962591-353C-4907-A5C6-B57AA832FC10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12962591-353C-4907-A5C6-B57AA832FC10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACBE8C96-353D-4735-861A-268B3AFFB72B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACBE8C96-353D-4735-861A-268B3AFFB72B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACBE8C96-353D-4735-861A-268B3AFFB72B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACBE8C96-353D-4735-861A-268B3AFFB72B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8941CA77-9524-4F9F-AA60-628C393BB01F} = {6326046A-4DD8-451E-9616-439CBC8BCAB7}
+		{E9CF2705-92AA-4172-A862-1B7D194A4457} = {6326046A-4DD8-451E-9616-439CBC8BCAB7}
+		{EEAC27CB-5E85-413C-AF4B-0B04EDAF1F75} = {6326046A-4DD8-451E-9616-439CBC8BCAB7}
+		{AFA020C2-90E2-44C8-8A0F-F564C1F354F8} = {6326046A-4DD8-451E-9616-439CBC8BCAB7}
+		{ACBE8C96-353D-4735-861A-268B3AFFB72B} = {6326046A-4DD8-451E-9616-439CBC8BCAB7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {70C4C234-03E5-41C2-AB54-D44FFDDDFB2D}

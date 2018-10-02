@@ -44,59 +44,61 @@ namespace Symmetric_Tree
 
     public class Solution
     {
-        Dictionary<int, List<int?>> values = new Dictionary<int, List<int?>>();
+        //Dictionary<int, List<int?>> values = new Dictionary<int, List<int?>>();
         public bool IsSymmetric(TreeNode root)
         {
             if (root == null) return true;
 
-            CheckNode(root, 1);
+            //return CheckNode(root.left, root.right);
 
-            
-            bool isSymantic = true;
-            foreach(var v in values)
+            var queue = new Queue<TreeNode>();
+            queue.Enqueue(root.left);
+            queue.Enqueue(root.right);
+            while (queue.Count > 0)
             {
-                if (v.Value.Count != Math.Pow(2, v.Key - 1))
-                  {
-                    isSymantic = false;
-                    break;
+                var left = queue.Dequeue();
+                var right = queue.Dequeue();
+                if (left == null && right == null)
+                {
+                    continue;
                 }
-                for (int i = 0; i < v.Value.Count; i++)
-                { 
-                    if (v.Value[i] != v.Value[v.Value.Count - i-1])
-                    {
-                        isSymantic = false;
-                        break;
-                    }
+                if (left == null || right == null)
+                {
+                    return false;
                 }
-                if (!isSymantic)
-                    break;
+                if (left.val != right.val)
+                {
+                    return false;
+                }
+
+                queue.Enqueue(left.left);
+                queue.Enqueue(right.right);
+                queue.Enqueue(left.right);
+                queue.Enqueue(right.left);
+
             }
 
-            return isSymantic;
-            
+            return true;
+
         }
 
         
 
-        public void CheckNode(TreeNode node, int level)
+        public bool CheckNode(TreeNode left, TreeNode right)
         {
-            if (values.Any(e => e.Key == level))
+            if(left == null || right == null)
             {
-                values[level].Add(node?.val);
-            }
-            else
-            {
-                values.Add(level, new List<int?>() { node?.val });
+                bool b = left == right;
+                return b;
             }
 
-            if (node != null)
+            if(left.val != right.val)
             {
-                CheckNode(node.left, level + 1);
-                CheckNode(node.right, level + 1);
+                return false;
             }
+
+            return CheckNode(left.left, right.right) && CheckNode(left.right, right.left);
             
-           
-
         }
 
     }

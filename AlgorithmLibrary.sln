@@ -49,6 +49,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BinaryTree", "BinaryTree", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Symmetric Tree", "Symmetric Tree\Symmetric Tree.csproj", "{ACBE8C96-353D-4735-861A-268B3AFFB72B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathSum", "PathSum\PathSum.csproj", "{20C62080-94F2-49A0-90AA-F098AD7CD238}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -143,6 +145,10 @@ Global
 		{ACBE8C96-353D-4735-861A-268B3AFFB72B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACBE8C96-353D-4735-861A-268B3AFFB72B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACBE8C96-353D-4735-861A-268B3AFFB72B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20C62080-94F2-49A0-90AA-F098AD7CD238}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20C62080-94F2-49A0-90AA-F098AD7CD238}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20C62080-94F2-49A0-90AA-F098AD7CD238}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20C62080-94F2-49A0-90AA-F098AD7CD238}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -153,6 +159,7 @@ Global
 		{EEAC27CB-5E85-413C-AF4B-0B04EDAF1F75} = {6326046A-4DD8-451E-9616-439CBC8BCAB7}
 		{AFA020C2-90E2-44C8-8A0F-F564C1F354F8} = {6326046A-4DD8-451E-9616-439CBC8BCAB7}
 		{ACBE8C96-353D-4735-861A-268B3AFFB72B} = {6326046A-4DD8-451E-9616-439CBC8BCAB7}
+		{20C62080-94F2-49A0-90AA-F098AD7CD238} = {6326046A-4DD8-451E-9616-439CBC8BCAB7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {70C4C234-03E5-41C2-AB54-D44FFDDDFB2D}

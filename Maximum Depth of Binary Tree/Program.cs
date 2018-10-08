@@ -17,7 +17,7 @@ namespace Maximum_Depth_of_Binary_Tree
     {
         public int MaxDepth(TreeNode root)
         {
-            if (root is null)
+            if (root == null)
                 return 0;
 
             return Find(root, 1);
@@ -25,7 +25,7 @@ namespace Maximum_Depth_of_Binary_Tree
 
         public int Find(TreeNode root, int level)
         {
-            if (root is null)
+            if (root == null)
                 return level;
 
             int levelL = Find(root.left, level + 1);

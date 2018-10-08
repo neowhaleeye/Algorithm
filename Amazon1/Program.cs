@@ -53,6 +53,8 @@ namespace Amazon1
                 pairs.Add(allLocations[v.Key, 1]);
                 result.Add(pairs);
             }
+
+            return result;
             
         }
     }

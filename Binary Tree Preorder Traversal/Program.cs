@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Binary_Tree_Preorder_Traversal
 {
+    /// <summary>
+    /// PreOrder Traverse mean accessing root first then go to left node of subtree and then right node.
+    /// </summary>
     class Program
     {
         static void Main(string[] args)

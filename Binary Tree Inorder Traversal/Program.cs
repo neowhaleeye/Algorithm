@@ -32,7 +32,7 @@ namespace Binary_Tree_Inorder_Traversal
             while(stack.Count>0)
             {
                 var element = stack.Pop();
-                if (element is null) continue;
+                if (element == null) continue;
                 if(element is TreeNode)
                 {
                     TreeNode tn = element as TreeNode;
@@ -53,7 +53,7 @@ namespace Binary_Tree_Inorder_Traversal
 
         public static IList<int> InorderTraversal(TreeNode root)
         {
-            if (root is null) return list;
+            if (root == null) return list;
             Helper(root);
 
             return list;
@@ -61,7 +61,7 @@ namespace Binary_Tree_Inorder_Traversal
 
         private static void Helper(TreeNode root)
         {
-            if (root is null) return;
+            if (root == null) return;
             Helper(root.left);
             list.Add(root.val);
             Helper(root.right);

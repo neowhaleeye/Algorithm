@@ -53,6 +53,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathSum", "PathSum\PathSum.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Count Univalue Subtrees", "Count Univalue Subtrees\Count Univalue Subtrees.csproj", "{590B4BEF-C53E-4888-8CA6-F46EEDEABCE4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StackQueue", "StackQueue", "{53C7FE46-1EA3-444E-82C4-F1B1B006509F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WallAndGate", "WallAndGate\WallAndGate.csproj", "{44E19D33-AEAA-4F2A-9D96-28FC213EDE03}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -155,6 +159,10 @@ Global
 		{590B4BEF-C53E-4888-8CA6-F46EEDEABCE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{590B4BEF-C53E-4888-8CA6-F46EEDEABCE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{590B4BEF-C53E-4888-8CA6-F46EEDEABCE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44E19D33-AEAA-4F2A-9D96-28FC213EDE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44E19D33-AEAA-4F2A-9D96-28FC213EDE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44E19D33-AEAA-4F2A-9D96-28FC213EDE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44E19D33-AEAA-4F2A-9D96-28FC213EDE03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -167,6 +175,7 @@ Global
 		{ACBE8C96-353D-4735-861A-268B3AFFB72B} = {6326046A-4DD8-451E-9616-439CBC8BCAB7}
 		{20C62080-94F2-49A0-90AA-F098AD7CD238} = {6326046A-4DD8-451E-9616-439CBC8BCAB7}
 		{590B4BEF-C53E-4888-8CA6-F46EEDEABCE4} = {6326046A-4DD8-451E-9616-439CBC8BCAB7}
+		{44E19D33-AEAA-4F2A-9D96-28FC213EDE03} = {53C7FE46-1EA3-444E-82C4-F1B1B006509F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {70C4C234-03E5-41C2-AB54-D44FFDDDFB2D}

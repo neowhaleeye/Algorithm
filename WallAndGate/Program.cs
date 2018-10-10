@@ -10,8 +10,8 @@ namespace WallAndGate
     {
         static void Main(string[] args)
         {
-            int[,] ag = new int[,] { {1,-1,0,1 },{ 1,1,1,-1}, {1,-1,1,-1 },{0,-1,1,1 } };
-
+            //int[,] ag = new int[,] { {1,-1,0,1 },{ 1,1,1,-1}, {1,-1,1,-1 },{0,-1,1,1 } };
+            int[,] ag = new int[,] { { 1 } };
             //int[,] ag = new int[,] { { 1, 2 }, { 3, 4 } };
             new Solution().WallsAndGates(ag);
         }
@@ -35,7 +35,6 @@ namespace WallAndGate
                 }
             }
 
-            int a = 0;
         }
 
         public int FindShortestPath(int[,] rooms, int r, int c)
@@ -73,7 +72,7 @@ namespace WallAndGate
 
             }
 
-            return finalStepBefore;
+            return (finalStepBefore > 0) ? finalStepBefore : v;
 
 
 

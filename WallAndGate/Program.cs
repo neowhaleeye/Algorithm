@@ -11,6 +11,8 @@ namespace WallAndGate
         static void Main(string[] args)
         {
             int[,] ag = new int[,] { {1,-1,0,1 },{ 1,1,1,-1}, {1,-1,1,-1 },{0,-1,1,1 } };
+
+            //int[,] ag = new int[,] { { 1, 2 }, { 3, 4 } };
             new Solution().WallsAndGates(ag);
         }
     }
@@ -26,54 +28,73 @@ namespace WallAndGate
             {
                 for(int c=0;c<nc;c++)
                 {
-                    int a = FindShortestPath(rooms, r, c);
+                    if (rooms[r, c] != -1 && rooms[r, c] != 0)
+                    {
+                        rooms[r, c] = FindShortestPath(rooms, r, c);
+                    }
                 }
             }
-            //for loop
-            // call from point (0,0) 
-            //for(int i=0l)
 
+            int a = 0;
         }
 
         public int FindShortestPath(int[,] rooms, int r, int c)
         {
             int nr = rooms.GetLength(0);
             int nc = rooms.GetLength(1);
-            Queue<int[]> queue = new Queue<int[]>();
-            Queue<int> stepQueue = new Queue<int>();
 
-            var v = rooms[r, c];
-            queue.Enqueue(new int[] { r,c });
-
+            HashSet<int[]> visied = new HashSet<int[]>();
+            Queue<IndexedQueue> queue = new Queue<IndexedQueue>();
+            
             int step = 0;
+            var v = rooms[r, c];
+            queue.Enqueue(new IndexedQueue { Step = step, Points = new int[] { r, c } });
 
-            while(queue.Count>0)
+            int finalStepBefore = 0;
+            while (queue.Count>0)
             {
-                
-                var pop = queue.Dequeue();
-                int rPop = pop[0];
-                int cPop = pop[1];
-                int val = rooms[rPop, cPop];
+                var current = queue.Dequeue();
+                int currentRow = current.Points[0];
+                int currentColumn = current.Points[1];
+                int val = rooms[currentRow, currentColumn];
+                visied.Add(new int[] { currentRow, currentColumn });
 
                 if (val == 0)
-                    break;
-
-                if (nr > rPop && nc > cPop && val == 1 )
                 {
-                    queue.Enqueue(new int[] { rPop, cPop + 1  });
-                    queue.Enqueue(new int[] { rPop + 1, cPop + 1  });
-                    queue.Enqueue(new int[] { rPop + 1, cPop });
+                    finalStepBefore = current.Step ;
+                    break;
                 }
 
-                
+              
+                AddToQueue(queue, current.Step, rooms, visied, currentRow, currentColumn-1, nr, nc);
+                AddToQueue(queue, current.Step, rooms, visied, currentRow, currentColumn+1, nr, nc);
+                AddToQueue(queue, current.Step, rooms, visied, currentRow+1, currentColumn, nr, nc);
+                AddToQueue(queue, current.Step, rooms, visied, currentRow-1, currentColumn, nr, nc);
 
-                
             }
 
-            return step;
+            return finalStepBefore;
 
 
 
         }
+
+        private void AddToQueue(Queue<IndexedQueue> queue, int step, int[,] rooms , HashSet<int[]> visied, int row, int column, int totalRow, int totalColumn)
+        {
+            if (visied.Any(e => e[0] == row && e[1] == column)) return;
+            if (row < 0 || column < 0) return;
+            if (totalRow <= row) return;
+            if (totalColumn <= column) return;
+            if (rooms[row, column] == -1) return;
+
+            queue.Enqueue(new IndexedQueue { Step = step + 1, Points = new int[] { row, column } });
+
+        }
+    }
+
+    public struct IndexedQueue
+    {
+        public int Step { get; set; }
+        public int[] Points { get; set; }
     }
 }

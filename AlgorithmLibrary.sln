@@ -67,6 +67,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Daily Temperatures", "Daily
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Evaluate Reverse Polish Notation", "Evaluate Reverse Polish Notation\Evaluate Reverse Polish Notation.csproj", "{1A716F85-EEB6-4684-A65F-1E106581D5D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decode String", "Decode String\Decode String.csproj", "{75766B71-5BB5-4BBD-9DD2-BA91C18D7E5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -193,6 +195,10 @@ Global
 		{1A716F85-EEB6-4684-A65F-1E106581D5D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A716F85-EEB6-4684-A65F-1E106581D5D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A716F85-EEB6-4684-A65F-1E106581D5D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75766B71-5BB5-4BBD-9DD2-BA91C18D7E5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75766B71-5BB5-4BBD-9DD2-BA91C18D7E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75766B71-5BB5-4BBD-9DD2-BA91C18D7E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75766B71-5BB5-4BBD-9DD2-BA91C18D7E5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -210,6 +216,7 @@ Global
 		{80E55C21-F613-4913-980E-92A569554761} = {53C7FE46-1EA3-444E-82C4-F1B1B006509F}
 		{54C89A9C-2C22-49FC-8683-87FDC8ACD63A} = {53C7FE46-1EA3-444E-82C4-F1B1B006509F}
 		{1A716F85-EEB6-4684-A65F-1E106581D5D3} = {53C7FE46-1EA3-444E-82C4-F1B1B006509F}
+		{75766B71-5BB5-4BBD-9DD2-BA91C18D7E5B} = {53C7FE46-1EA3-444E-82C4-F1B1B006509F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {70C4C234-03E5-41C2-AB54-D44FFDDDFB2D}

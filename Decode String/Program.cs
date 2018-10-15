@@ -13,7 +13,12 @@ namespace Decode_String
             Console.WriteLine("Hello World!");
 
 
-            Console.WriteLine(new Solution().DecodeString("3[a]4[ab]ccc"));
+            //Console.WriteLine(new Solution().DecodeString("13[a]4[ab]ccc"));
+            Console.WriteLine(new Solution().DecodeString("3[a2[c]]"));
+            Console.WriteLine(new Solution().DecodeString("3[a]2[bc]"));
+
+
+            
             //"3[a2[c]]"
         }
     }
@@ -22,62 +27,47 @@ namespace Decode_String
     {
         public string DecodeString(string s)
         {
-            StringBuilder ret = new StringBuilder();
-            Queue<object> queue = new Queue<object>();
-            string number = string.Empty;
+           
+            Stack<object> stack = new Stack<object>();
+            int curNum = 0;
+            string curString = string.Empty;
             foreach (char c in s.ToCharArray())
             {
-                if(Char.IsDigit(c))
+
+                if (c == '[')
                 {
-                    number += c;
+                    stack.Push(curString);
+                    stack.Push(curNum);
+                    curString = "";
+                    curNum = 0;
                 }
-                else if(c == '[')
+                else if (c == ']')
                 {
-                    //queue.Enqueue(number);
+                    int num = Convert.ToInt32(stack.Pop());
+                    string preString = stack.Pop().ToString();
+                    string build = string.Empty;
+                    for(int i=0;i<num;i++)
+                    {
+                        build += curString;
+                    }
+                    curString = preString + build;
                 }
-                else if(c == ']')
+                else if (char.IsDigit(c))
                 {
-                    string chars = string.Empty;
-                    while(queue.Count>0)
-                    {
-                        chars += queue.Dequeue();
-                    }
-                    for(int i=0;i< Convert.ToInt32(number); i++)
-                    {
-                        ret.Append(chars);
-                    }
-                    
-                    number = "";
+                    curNum = curNum * 10 + Convert.ToInt32(c.ToString());
                 }
                 else
                 {
-                    queue.Enqueue(c);
+                    curString += c;
                 }
             }
 
-            queue.ToList().ForEach(e => ret.Append(queue.Dequeue().ToString()));
+            return curString;
+                
+           
+           
 
-            return ret.ToString();
-
-            //if (string.IsNullOrEmpty(s))
-            //    return "";
-
-            //List<Dic> list = new List<Dic>();
-            //s = "]" + s;
-            ////IList<Dic> dic = new List<Dic>();
-            //ParseStrig(s, list);
-
-
-            //StringBuilder strb = new StringBuilder(); 
-            //foreach(var v in list)
-            //{
-            //    for(int i=0;i<v.Number;i++)
-            //    {
-            //        strb.Append(v.Chars);
-            //    }
-            //}
-
-            //return strb.ToString();
+            
 
         }
 

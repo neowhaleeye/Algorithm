@@ -10,33 +10,8 @@ namespace Product_of_Array_Except_Self
     {
         static void Main(string[] args)
         {
-            int[] numbs = new int[] { 1, 2, 3, 4 };
-
-            // Create Temporary Array 
-            int[] lefttemp = new int[numbs.Length];
-            // shift numbers from the left.
-            lefttemp[0] = 1;
-
-            for (int i = 1; i < numbs.Length ; i++)
-            {
-                lefttemp[i] = lefttemp[i-1]* numbs[i - 1];
-            }
-
-            // shift numbers from the right 
-            int[] rightTemp = new int[numbs.Length];
-
-            rightTemp[numbs.Length - 1] = 1;
-
-            for (int i = numbs.Length-2; i >=0; i--)
-            {
-                rightTemp[i] = numbs[i + 1] * rightTemp[i +  1];
-            }
-
-            int[] result = new int[numbs.Length];
-            for(int i=0;i<numbs.Length;i++)
-            {
-                result[i] = lefttemp[i] * rightTemp[i];
-            }
+            MyVersion();
+            SimpleVersion();
             
         }
 
@@ -60,6 +35,37 @@ namespace Product_of_Array_Except_Self
                 lefttemp[i] *= right;
                 right *= numbs[i];
             }
+
+            lefttemp.ToList().ForEach(e => Console.WriteLine(e));
+
+        }
+
+        static void MyVersion()
+        {
+            int[] numbs = new int[] { 1, 2, 3, 4 };
+            int[,] matrix = new int[numbs.Length+1, numbs.Length];
+
+            for(int i=0;i< numbs.Length;i++)
+            {
+                int rowSum = 1;
+                for(int j=0;j<numbs.Length;j++)
+                {
+                    int val = 0;
+                    if (i == j) val = 1;
+                    else val = numbs[j];
+                    rowSum *= val;
+                    matrix[i, j] = val;
+                }
+                matrix[numbs.Length,i ] = rowSum;
+            }
+
+            for (int i=0;i<matrix.GetLength(1);i++)
+            {
+                numbs[i] = matrix[matrix.GetLength(0) - 1, i];
+            }
+            numbs.ToList().ForEach(e => Console.WriteLine(e));
+
+
 
         }
     }

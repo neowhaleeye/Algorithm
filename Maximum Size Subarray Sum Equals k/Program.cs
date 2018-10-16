@@ -21,27 +21,36 @@ namespace Maximum_Size_Subarray_Sum_Equals_k
        
         public int MaxSubArrayLen(int[] nums, int k)
         {
-            if (nums == null || nums.Length == 0)
-            {
-                return 0;
-            }
-            int n = nums.Length;
-            for (int i = 1; i < n; i++)
+            int len = nums.Length;
+
+            for(int i=1;i<len;i++)
             {
                 nums[i] += nums[i - 1];
             }
-            Dictionary<int, int> map = new Dictionary<int, int>();
-            map.Add(0, -1); // add this fake entry to make sum from 0 to j consistent
-            int max = 0;
-            for (int i = 0; i < n; i++)
-            {
-                if (map.ContainsKey(nums[i] - k))
-                    max = Math.Max(max, i - map[nums[i] - k]);
-                if (!map.ContainsKey(nums[i])) // keep only 1st duplicate as we want first index as left as possible
-                    map.Add(nums[i], i);
-            }
-            return max;
 
+            Dictionary<int, int> prevSum = new Dictionary<int, int>
+            {
+                { 0,-1 } // add this fake entry to make sum from 0 to j consistent
+            };
+
+            int max = 0;
+            List<int> arrayLength = new List<int>();
+            for (int i=0;i<len;i++)
+            {
+                int diff = nums[i] - k;
+                if(prevSum.ContainsKey(diff))
+                {
+                    max = Math.Max(max, i - prevSum[diff]);
+                }
+                if (!prevSum.ContainsKey(nums[i]))
+                {
+                    prevSum.Add(nums[i], i);
+                }
+                
+            }
+
+            return max;
+         
         }
 
        

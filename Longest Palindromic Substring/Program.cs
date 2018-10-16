@@ -11,7 +11,59 @@ namespace Longest_Palindromic_Substring
         static void Main(string[] args)
         {
             Console.WriteLine(LongestPalindrome("aaabaaaa"));
+            //BruteForce("aaabaaaa");
         }
+
+        public static void BruteForce(string s)
+        {
+            List<string> splited = new List<string>();
+            List<string> palidromicExpression = new List<string>();
+
+            for (int i= 2; i <= s.Length;i++)
+            {
+                for (int j = 0; j < s.Length; j++)
+                {
+                    if (j <= s.Length - i)
+                    {
+                        splited.Add(s.Substring(j, i));
+                    }
+                }
+            }
+
+
+            foreach(var ss in splited)
+            {
+                if(IsP(ss))
+                {
+                    palidromicExpression.Add(ss);
+                }
+            }
+           
+        }
+
+        private static bool IsP(string s)
+        {
+            int leftIdex = 0;
+            int rightIndex = s.Length - 1;
+
+            bool isP = false;
+            while(leftIdex<=rightIndex)
+            {
+                if(s[leftIdex] == s[rightIndex])
+                {
+                    isP = true;
+                    leftIdex++;
+                    rightIndex--;
+                }
+                else
+                {
+                    isP = false;
+                    break;
+                }
+            }
+            return isP;
+        }
+
         public static String LongestPalindrome(String s)
         {
             

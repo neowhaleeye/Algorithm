@@ -37,10 +37,10 @@ namespace Maximum_Size_Subarray_Sum_Equals_k
             List<int> arrayLength = new List<int>();
             for (int i=0;i<len;i++)
             {
-                int diff = nums[i] - k;
-                if(prevSum.ContainsKey(diff))
+                int latterSum = nums[i] - k;
+                if(prevSum.ContainsKey(latterSum))
                 {
-                    max = Math.Max(max, i - prevSum[diff]);
+                    max = Math.Max(max, i - prevSum[latterSum]);
                 }
                 if (!prevSum.ContainsKey(nums[i]))
                 {

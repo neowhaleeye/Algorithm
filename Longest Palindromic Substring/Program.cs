@@ -10,7 +10,7 @@ namespace Longest_Palindromic_Substring
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(LongestPalindrome("aaabaaaa"));
+            Console.WriteLine(LongestPalindrome("dcabace"));
             //BruteForce("aaabaaaa");
         }
 
@@ -66,40 +66,39 @@ namespace Longest_Palindromic_Substring
 
         public static String LongestPalindrome(String s)
         {
-            
-                if (s == null || s.Length < 1) return "";
-                int start = 0, end = 0;
-                for (int i = 0; i < s.Length; i++)
-                {
-                    int len1 = expandAroundCenter(s, i, i);
-                    int len2 = expandAroundCenter(s, i, i + 1);
-                    int len = Math.Max(len1, len2);
-                    if (len > end - start)
-                    {
-                        start = i - (len - 1) / 2;
-                        end = i + len / 2;
-                    }
-                }
-                return s.Substring(start, end + 1);
-            
+            if (s == null) return null;
+            if (s.Length < 2) return s;
 
-         
-
-
-
-        }
-
-        private static int expandAroundCenter(String s, int left, int right)
-        {
-            int L = left, R = right;
-            while (L >= 0 && R < s.Length && s[L] == s[R])
+            int start = 0, end = 0;
+            for(int i=0;i<s.Length;i++)
             {
-                L--;
-                R++;
+                int len1 = Expands(s, i, i);
+                int len2 = Expands(s, i, i + 1);
+                int len = Math.Max(len1, len2);
+                if(len > end-start)
+                {
+                    start = i - (len-1) / 2;
+                    end = i + (len / 2);
+                }
             }
-            return R - L - 1;
+
+            return s.Substring(start, end);
+
         }
 
+        private static int Expands(string s, int leftPos, int rightPos)
+        {
+            int left = leftPos;
+            int right = rightPos;
+            while(left >= 0 && right < s.Length-1 && s[left] == s[right])
+            {
+                left--;
+                right++;
+            }
+
+            return right - left - 1;
+        }
+        
 
 
     }

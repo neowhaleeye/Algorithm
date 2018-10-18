@@ -17,26 +17,25 @@ namespace Product_of_Array_Except_Self
 
         static void SimpleVersion()
         {
-            int[] numbs = new int[] { 1, 2, 3, 4 };
-            int n = numbs.Length;
-            // Create Temporary Array 
-            int[] lefttemp = new int[n];
-            // shift numbers from the left.
-            lefttemp[0] = 1;
+            int[] nums = new int[] { 1, 2, 3, 4 };
+            int n = nums.Length;
+            int[] temp = new int[n];
 
-            for (int i = 1; i < n; i++)
+            temp[0] = 1;
+            for(int i=1;i<n;i++)
             {
-                lefttemp[i] = lefttemp[i - 1] * numbs[i - 1];
+                temp[i] = temp[i - 1] * nums[i - 1];
             }
 
             int right = 1;
-            for( int i=n-1;i>=0;i--)
+            for (int i =n-1; i >=0;i--)
             {
-                lefttemp[i] *= right;
-                right *= numbs[i];
+                temp[i] *= right;
+                right *= nums[i];
             }
 
-            lefttemp.ToList().ForEach(e => Console.WriteLine(e));
+
+            temp.ToList().ForEach(e => Console.WriteLine(e));
 
         }
 

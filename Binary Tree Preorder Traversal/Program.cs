@@ -28,6 +28,33 @@ namespace Binary_Tree_Preorder_Traversal
 
         static List<int> r = new List<int>();
 
+        public static IList<int> Iternative(TreeNode root)
+        {
+            Stack<object> stack = new Stack<object>();
+            var ret = new List<int>();
+
+            stack.Push(root);
+
+            while (stack.Count > 0)
+            {
+                var element = stack.Pop();
+                if (element == null) continue;
+                if (element is TreeNode)
+                {
+                    TreeNode tn = element as TreeNode;
+                    stack.Push(tn.right);
+                    stack.Push(tn.left);
+                    stack.Push(tn.val);
+                }
+                else
+                {
+                    ret.Add((int)element);
+                }
+            }
+
+            return ret;
+        }
+
         private static IList<int> PreorderTraversalIterative(TreeNode root)
         {
             if (root != null)

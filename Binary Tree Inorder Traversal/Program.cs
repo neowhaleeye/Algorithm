@@ -53,6 +53,16 @@ namespace Binary_Tree_Inorder_Traversal
 
         public static IList<int> InorderTraversal(TreeNode root)
         {
+            //List<int> result = new List<int>();
+            //if (root == null) return result;
+
+            //result.AddRange(InorderTraversal(root.left));
+            //result.Add(root.val);
+            //result.AddRange(InorderTraversal(root.right));
+
+            //return result;
+
+
             if (root == null) return list;
             Helper(root);
 

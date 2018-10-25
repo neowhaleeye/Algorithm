@@ -25,6 +25,19 @@ namespace WallGateSecond
 
         public class Solution
         {
+            static readonly int EMPTY = Int32.MaxValue;
+            static readonly int WALL = -1;
+            static readonly int GATE = 0;
+            static readonly List<int[]> DIRECTIONS = new List<int[]>
+            {
+                new int[] {1,0},
+                new int[] {-1,0},
+                new int[] {0,1},
+                new int[] {0,-1},
+            };
+
+
+
             public void WallsAndGates(int[,] rooms)
             {
                 int rowCount = rooms.GetLength(0);
@@ -32,44 +45,35 @@ namespace WallGateSecond
 
                 if (rowCount == 0 && columnCount == 0) return;
 
-                List<int[,]> result = new List<int[,]>();
-             
-
-                for (int i=0; i<rowCount;i++)
+                Queue<int[]> q = new Queue<int[]>();
+                for(int row=0;row<rowCount;row++)
                 {
-                    for (int j=0;j<columnCount;j++)
+                    for(int col=0; col < columnCount; col++)
                     {
-                        if(rooms[i,j] == 0)
+                        if(rooms[row,col] ==GATE)
                         {
-                            result.Add((int[,])rooms.Clone());
-                            Search(result.Last(), new int[] { i, j }, rowCount, columnCount);
+                            q.Enqueue(new int[] { row, col });
                         }
+
                     }
                 }
 
-                if (result.Count>0)
+                while(q.Count>0)
                 {
-                    int[,]  finalResult = result[0];
-                    foreach (var current in result)
+                    int[] point = q.Dequeue();
+                    int row = point[0];
+                    int col = point[1];
+                    foreach(var dire in DIRECTIONS)
                     {
-                        for (int k = 0; k < rowCount; k++)
-                        {
-                            for (int m = 0; m < columnCount; m++)
-                            {
-                                finalResult[k, m] = Math.Min(finalResult[k, m], current[k, m]);
-                            }
-                        }
-                    }
+                        int r = row + dire[0];
+                        int c = col + dire[1];
+                        if (r < 0 || c < 0 || r >= rowCount || c >= columnCount || rooms[r, c] != EMPTY) continue;
 
-                    for (int k = 0; k < rowCount; k++)
-                    {
-                        for (int m = 0; m < columnCount; m++)
-                        {
-                            rooms[k, m] = finalResult[k, m];
-                        }
+                        rooms[r, c] = rooms[row, col] + 1;
+                        q.Enqueue(new int[] { r, c });
                     }
                 }
-                
+
             }
 
             private void Search(int[,] rooms, int[] points, int rowCount, int columnCount)
@@ -89,23 +93,23 @@ namespace WallGateSecond
 
                     if (row > 0 && rooms[row - 1, column] == int.MaxValue)
                     {
-                        rooms[row - 1, column] = Math.Min(rooms[row - 1, column], currentValue + 1);
+                        rooms[row - 1, column] = currentValue + 1;
                         pointQueue.Enqueue(new int[] { row - 1, column });
                     }
                     if (row < rowCount - 1 && rooms[row + 1, column] == int.MaxValue)
                     {
-                        rooms[row + 1, column] = Math.Min(rooms[row + 1, column], currentValue + 1);
+                        rooms[row + 1, column] = currentValue + 1;
                         pointQueue.Enqueue(new int[] { row + 1, column });
                     }
                     if (column < columnCount - 1 && rooms[row, column + 1] == int.MaxValue)
                     {
-                        rooms[row, column + 1] = Math.Min(rooms[row, column + 1], currentValue + 1);
+                        rooms[row, column + 1] = currentValue + 1;
                         pointQueue.Enqueue(new int[] { row, column + 1 });
 
                     }
                     if (column > 0 && rooms[row, column-1] == int.MaxValue)
                     {
-                        rooms[row, column - 1] = Math.Min(rooms[row, column - 1], currentValue + 1);
+                        rooms[row, column - 1] = currentValue + 1;
                         pointQueue.Enqueue(new int[] { row, column - 1 });
                     }
                 }

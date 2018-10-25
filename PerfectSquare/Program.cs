@@ -20,14 +20,17 @@ namespace PerfectSquare
         {
             int num = Convert.ToInt32(Math.Floor((Math.Sqrt(n))));
 
+          
+
             Stack<int> list = new Stack<int>();
             list.Push(num);
             while (list.Count > 0)
             {
-                int current = list.Peek();
+                //int current = list.Peek();
                 int remain = n - list.Sum(e=>e*e);
                 if (remain == 0) break;
-                if(Math.Floor(Math.Sqrt(remain))<2)
+                //if(Math.Floor(Math.Sqrt(remain))<2) // remain square is less than two , so try to reduce the first square size by subracting one
+                if(remain<4)
                 {
                     int down = list.Pop() - 1;
                     list.Push(down);

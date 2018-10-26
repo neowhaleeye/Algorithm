@@ -75,6 +75,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Target Sum", "Target Sum\Ta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maximum Size Subarray Sum Equals k", "Maximum Size Subarray Sum Equals k\Maximum Size Subarray Sum Equals k.csproj", "{B078E5DA-8999-4C91-BB88-A4DA5A5AF138}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intersection of Two Linked Lists", "Intersection of Two Linked Lists\Intersection of Two Linked Lists.csproj", "{5F4CCEB5-8313-4212-9D60-E6E04F7E0316}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -217,6 +219,10 @@ Global
 		{B078E5DA-8999-4C91-BB88-A4DA5A5AF138}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B078E5DA-8999-4C91-BB88-A4DA5A5AF138}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B078E5DA-8999-4C91-BB88-A4DA5A5AF138}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F4CCEB5-8313-4212-9D60-E6E04F7E0316}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F4CCEB5-8313-4212-9D60-E6E04F7E0316}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F4CCEB5-8313-4212-9D60-E6E04F7E0316}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F4CCEB5-8313-4212-9D60-E6E04F7E0316}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

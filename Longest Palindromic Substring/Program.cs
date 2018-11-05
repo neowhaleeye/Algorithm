@@ -10,7 +10,8 @@ namespace Longest_Palindromic_Substring
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(LongestPalindrome("dcabace"));
+            Console.WriteLine(LongestPalindrome("aaabbaaa"));
+            //BruteForce("aba");
             //BruteForce("aaabaaaa");
         }
 
@@ -38,7 +39,12 @@ namespace Longest_Palindromic_Substring
                     palidromicExpression.Add(ss);
                 }
             }
-           
+
+            
+
+            //palidromicExpression.OrderByDescending(e=>e.Count)
+
+
         }
 
         private static bool IsP(string s)
@@ -77,12 +83,13 @@ namespace Longest_Palindromic_Substring
                 int len = Math.Max(len1, len2);
                 if(len > end-start)
                 {
-                    start = i - (len-1) / 2;
+                    start = i - (len - 1) / 2;
                     end = i + (len / 2);
                 }
             }
 
-            return s.Substring(start, end);
+            return s.Substring(start, end-start+1);
+            //return s.Substring(start, end);
 
         }
 
@@ -90,7 +97,7 @@ namespace Longest_Palindromic_Substring
         {
             int left = leftPos;
             int right = rightPos;
-            while(left >= 0 && right < s.Length-1 && s[left] == s[right])
+            while(left >= 0 && right <= s.Length-1 && s[left] == s[right])
             {
                 left--;
                 right++;

@@ -22,8 +22,31 @@ namespace Target_Sum
         int count = 0;
         public int FindTargetSumWays(int[] nums, int S)
         {
-            Helper(nums, 0, 0, S);
-            return count;
+            
+            Dictionary<int, int>[] map = new Dictionary<int, int>[nums.Length];
+            for(int i=0;i<nums.Length;i++)
+            {
+                map[i] = new Dictionary<int, int>();
+            }
+
+            return Find(nums, 0, S, map);
+
+
+            //Helper(nums, 0, 0, S);
+            //return count;
+        }
+
+        private int Find(int[] nums, int index, int target, Dictionary<int,int>[] map)
+        {
+            if (index == nums.Length) return (target == 0) ? 1 : 0;
+            if (map[index].ContainsKey(target)) return map[index][target];
+
+            int cnt = Find(nums, index + 1, target - nums[index], map)
+                        + Find(nums, index + 1, target + nums[index], map);
+
+            map[index][target] = cnt;
+            return cnt;
+
         }
 
         private void Helper(int[] nums, int index, int sum, int s)

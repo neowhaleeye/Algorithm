@@ -93,6 +93,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BestTime to Buy and Sell St
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binary Tree Vertical Order Traversal", "Binary Tree Vertical Order Traversal\Binary Tree Vertical Order Traversal.csproj", "{C19C9D41-59A7-48B5-B6EE-1556F013FDD3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LRUCache", "LRUCache\LRUCache.csproj", "{A2A560AA-77E8-4E55-8E99-5F8608991E1F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -271,6 +273,10 @@ Global
 		{C19C9D41-59A7-48B5-B6EE-1556F013FDD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C19C9D41-59A7-48B5-B6EE-1556F013FDD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C19C9D41-59A7-48B5-B6EE-1556F013FDD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2A560AA-77E8-4E55-8E99-5F8608991E1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2A560AA-77E8-4E55-8E99-5F8608991E1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2A560AA-77E8-4E55-8E99-5F8608991E1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2A560AA-77E8-4E55-8E99-5F8608991E1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

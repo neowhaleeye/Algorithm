@@ -95,6 +95,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binary Tree Vertical Order 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LRUCache", "LRUCache\LRUCache.csproj", "{A2A560AA-77E8-4E55-8E99-5F8608991E1F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Word Ladder 2", "Word Ladder 2\Word Ladder 2.csproj", "{1F5F0D76-6CA9-4A24-A155-3172204A5546}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleNumber", "SingleNumber\SingleNumber.csproj", "{9F8785E8-9FBA-480C-96F9-7B88D3383AF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -277,6 +281,14 @@ Global
 		{A2A560AA-77E8-4E55-8E99-5F8608991E1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2A560AA-77E8-4E55-8E99-5F8608991E1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2A560AA-77E8-4E55-8E99-5F8608991E1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F5F0D76-6CA9-4A24-A155-3172204A5546}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F5F0D76-6CA9-4A24-A155-3172204A5546}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F5F0D76-6CA9-4A24-A155-3172204A5546}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F5F0D76-6CA9-4A24-A155-3172204A5546}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F8785E8-9FBA-480C-96F9-7B88D3383AF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F8785E8-9FBA-480C-96F9-7B88D3383AF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F8785E8-9FBA-480C-96F9-7B88D3383AF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F8785E8-9FBA-480C-96F9-7B88D3383AF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

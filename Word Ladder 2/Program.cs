@@ -18,7 +18,18 @@ namespace Word_Ladder_2
     {
         public IList<IList<string>> FindLadders(string beginWord, string endWord, IList<string> wordList)
         {
+            if(endWord != wordList.Last())
+            {
+                return new List<IList<string>>();
+            }
 
+            string compareWord = endWord;
+            for (int i=0;i<wordList.Count-1;i++)
+            {
+                bool s = IsSimilarWord(compareWord, wordList[i]);
+            }
+
+            return null;
         }
 
         private bool IsSimilarWord(string s1, string s2)
@@ -31,7 +42,7 @@ namespace Word_Ladder_2
                     break;
             }
 
-            return diff == 0;
+            return diff == 1;
 
         }
 

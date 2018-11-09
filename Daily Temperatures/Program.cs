@@ -4,41 +4,111 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Daily_Temperatures
+namespace BFSDFS
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            int[] temp = new int[] {  41, 41, 77};
+            clsGraph graph = new clsGraph(4);
+            graph.AddEdge(0, 1);
+            graph.AddEdge(0, 2);
+            graph.AddEdge(1, 2);
+            graph.AddEdge(2, 0);
+            graph.AddEdge(2, 3);
+            graph.AddEdge(3, 3);
+            //Print adjacency matrix
+            graph.PrintAdjacecnyMatrix();
 
-            var r = new Solution().DailyTemperatures(temp);
+            Console.WriteLine("BFS traversal starting from vertex 2:");
+            graph.BFS(2);
+            Console.WriteLine("DFS traversal starting from vertex 2:");
+            graph.DFS(2);
 
-            r.ToList().ForEach(e => Console.WriteLine(e));
+
         }
     }
 
-    public class Solution
+    class clsGraph
     {
-        public int[] DailyTemperatures(int[] T)
+        private int Vertices;
+        private List<int>[] Adjency;
+
+        public clsGraph(int v)
         {
-            Stack<int[]> stack = new Stack<int[]>();
-            int[] ret = new int[T.Length];
-            for(int i=0;i<T.Length;i++)
+            Vertices = v;
+            Adjency = new List<int>[v];
+            for(int i=0;i<v;i++)
             {
-                int currentValue = T[i];
-                while(stack.Count>0 && currentValue > stack.Peek()[1])
-                {
-                    int index = stack.Pop()[0];
-                    ret[index] = i - index;
-                }
-                stack.Push(new int[] { i, T[i] });
+                Adjency[i] = new List<int>();
             }
-
-            return ret;
-
-
         }
+
+        public void AddEdge(int v, int w)
+        {
+            Adjency[v].Add(w);
+        }
+
+        public void BFS(int s)
+        {
+            bool[] visited = new bool[Vertices];
+            Queue<int> queue = new Queue<int>();
+            visited[s] = true;
+            queue.Enqueue(s);
+
+            while(queue.Count>0)
+            {
+                s = queue.Dequeue();
+                Console.WriteLine("next->{0}", s);
+                foreach(int next in Adjency[s])
+                {
+                    if(!visited[next])
+                    {
+                        visited[next] = true;
+                        queue.Enqueue(next);
+                    }
+                }
+            }
+        }
+
+        public void DFS(int s)
+        {
+            bool[] visited = new bool[Vertices];
+            Stack<int> stack = new Stack<int>();
+            visited[s] = true;
+            stack.Push(s);
+
+            while(stack.Count>0)
+            {
+                s = stack.Pop();
+                Console.WriteLine("next->{0}", s);
+                foreach(int next in Adjency[s])
+                {
+                    if(!visited[next])
+                    {
+                        visited[next] = true;
+                        stack.Push(next);
+                    }
+                }
+            }
+        }
+
+        public void PrintAdjacecnyMatrix()
+        {
+            for (int i = 0; i < Vertices; i++)
+            {
+                Console.Write(i + ":[");
+                string s = "";
+                foreach (var k in Adjency[i])
+                {
+                    s = s + (k + ",");
+                }
+                s = s.Substring(0, s.Length - 1);
+                s = s + "]";
+                Console.Write(s);
+                Console.WriteLine();
+            }
+        }
+
     }
 }

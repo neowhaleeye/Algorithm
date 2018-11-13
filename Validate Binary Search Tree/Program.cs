@@ -35,8 +35,6 @@ namespace Validate_Binary_Search_Tree
                 {
                     return false;
                 }
-              
-
             }
             if(root != null && root.right != null)
             {
@@ -46,13 +44,46 @@ namespace Validate_Binary_Search_Tree
                 {
                     return false;
                 }
-               
             }
-
-
-
             return true;
         }
+
+        public bool isValidBST2(TreeNode root)
+        {
+            if (root == null) return true;
+            Stack<TreeNode> node = new Stack<TreeNode>();
+            TreeNode previous = null;
+            while(root != null || node.Count>0)
+            {
+                if(root != null)
+                {
+                    node.Push(root);
+                    root = root.left;
+                }
+                root = node.Pop();
+                if (previous != null && previous.val > root.val) return false;
+                previous = root;
+                root = root.right;
+            }
+            return true;
+            //if (root == null) return true;
+            //Stack<TreeNode> stack = new Stack<TreeNode>();
+            //TreeNode pre = null;
+            //while (root != null || stack.Count>0)
+            //{
+            //    while (root != null)
+            //    {
+            //        stack.Push(root);
+            //        root = root.left;
+            //    }
+            //    root = stack.Pop();
+            //    if (pre != null && root.val <= pre.val) return false;
+            //    pre = root;
+            //    root = root.right;
+            //}
+            //return true;
+        }
+
     }
 
     public class TreeNode

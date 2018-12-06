@@ -37,7 +37,7 @@ namespace Number_of_Islands
             Console.WriteLine(NumIslands(grid)); 
 
         }
-
+      
         public static int NumIslands(char[,] grid)
         {
             int numberOfIsland = 0;

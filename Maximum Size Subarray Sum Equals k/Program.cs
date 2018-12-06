@@ -28,6 +28,7 @@ namespace Maximum_Size_Subarray_Sum_Equals_k
                 nums[i] += nums[i - 1];
             }
 
+            
             Dictionary<int, int> prevSum = new Dictionary<int, int>
             {
                 { 0,-1 } // add this fake entry to make sum from 0 to j consistent

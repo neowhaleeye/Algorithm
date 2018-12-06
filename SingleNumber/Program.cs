@@ -18,6 +18,9 @@ namespace SingleNumber
     {
         public int SingleNumber(int[] nums)
         {
+            HashSet<int> diffCont = new HashSet<int>();
+            
+            
             int result = 0;
             foreach (int num in nums)
                 result ^= num;

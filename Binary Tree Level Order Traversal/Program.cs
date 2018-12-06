@@ -20,7 +20,7 @@ namespace Binary_Tree_Level_Order_Traversal
             n20.left = n15;
             n20.right = n7;
 
-            var list = new Solution().LevelOrder(n3);
+            var list = new Solution().LO(n3);
 
             list.ToList().ForEach(e => e.ToList().ForEach(ee => Console.WriteLine(ee)));
         }
@@ -29,6 +29,46 @@ namespace Binary_Tree_Level_Order_Traversal
 
     public class Solution
     {
+
+        public IList<IList<int>> LO(TreeNode root)
+        {
+            IList<IList<int>> result = new List<IList<int>>();
+            if (root == null) return result;
+
+            Queue<TreeNode> nodeQ = new Queue<TreeNode>();
+            Queue<int> lvlQ = new Queue<int>();
+
+            nodeQ.Enqueue(root);
+            lvlQ.Enqueue(0);
+            while (nodeQ.Count > 0)
+            {
+                var node = nodeQ.Dequeue();
+                var lvl = lvlQ.Dequeue();
+
+                if (result.Count > lvl)
+                {
+                    result[lvl].Add(node.val);
+                }
+                else
+                {
+                    result.Add(new List<int>() { node.val });
+                }
+
+                if (node.left != null)
+                {
+                    nodeQ.Enqueue(node.left);
+                    lvlQ.Enqueue(lvl + 1);
+                }
+                if (node.right != null)
+                {
+                    nodeQ.Enqueue(node.right);
+                    lvlQ.Enqueue(lvl + 1);
+                }
+            }
+
+            return result;
+        }
+
         public IList<IList<int>> LevelOrder(TreeNode root)
         {
             IList<IList<int>> result = new List<IList<int>>();

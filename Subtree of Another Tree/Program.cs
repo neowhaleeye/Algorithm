@@ -37,22 +37,23 @@ namespace Subtree_of_Another_Tree
     {
         public bool IsSubtree(TreeNode s, TreeNode t)
         {
-            return Traverse(s, t);
+            return s != null && (IsEqual(s, t) || IsSubtree(s.left, t) || IsSubtree(s.right, t));
         }
 
-        public bool equals(TreeNode x, TreeNode y)
+        //public bool Traverse(TreeNode s, TreeNode t)
+        //{
+            
+        //}
+
+        public bool IsEqual(TreeNode s, TreeNode t)
         {
-            if (x == null && y == null)
-                return true;
-            if (x == null || y == null)
-                return false;
-            return x.val == y.val && equals(x.left, y.left) && equals(x.right, y.right);
+            if (t == null && s == null) return true;
+            if (t == null || s == null) return false;
+            return s.val == t.val && IsEqual(s.left , t.left) && IsEqual(s.right , t.right);
+
         }
 
-        public bool Traverse(TreeNode s, TreeNode t)
-        {
-            return s != null && (equals(s, t) || Traverse(s.left, t) || Traverse(s.right, t));
-        }
+     
     }
 
     public class TreeNode

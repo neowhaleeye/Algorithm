@@ -111,6 +111,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HashTable", "HashTable", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignHash", "DesignHashMap\DesignHash.csproj", "{6116CBE7-9972-4EAA-824C-8C63A53C8E75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindDuplicateUsingHash", "FindDuplicateUsingHash\FindDuplicateUsingHash.csproj", "{93321C06-2D4E-4213-8F71-53CC82DDEC12}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -321,6 +323,10 @@ Global
 		{6116CBE7-9972-4EAA-824C-8C63A53C8E75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6116CBE7-9972-4EAA-824C-8C63A53C8E75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6116CBE7-9972-4EAA-824C-8C63A53C8E75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93321C06-2D4E-4213-8F71-53CC82DDEC12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93321C06-2D4E-4213-8F71-53CC82DDEC12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93321C06-2D4E-4213-8F71-53CC82DDEC12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93321C06-2D4E-4213-8F71-53CC82DDEC12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -351,6 +357,7 @@ Global
 		{C19C9D41-59A7-48B5-B6EE-1556F013FDD3} = {6326046A-4DD8-451E-9616-439CBC8BCAB7}
 		{897DFF3D-3DB8-4C66-AC55-4E64FEBBF1A8} = {6326046A-4DD8-451E-9616-439CBC8BCAB7}
 		{6116CBE7-9972-4EAA-824C-8C63A53C8E75} = {4717B1F7-6F8C-4920-87F2-64F1827DBA9C}
+		{93321C06-2D4E-4213-8F71-53CC82DDEC12} = {4717B1F7-6F8C-4920-87F2-64F1827DBA9C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {70C4C234-03E5-41C2-AB54-D44FFDDDFB2D}

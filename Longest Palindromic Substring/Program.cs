@@ -88,6 +88,7 @@ namespace Longest_Palindromic_Substring
                 }
             }
 
+
             return s.Substring(start, end-start+1);
             //return s.Substring(start, end);
 
@@ -95,6 +96,8 @@ namespace Longest_Palindromic_Substring
 
         private static int Expands(string s, int leftPos, int rightPos)
         {
+            
+
             int left = leftPos;
             int right = rightPos;
             while(left >= 0 && right <= s.Length-1 && s[left] == s[right])

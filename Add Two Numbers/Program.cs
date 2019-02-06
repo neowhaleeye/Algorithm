@@ -22,10 +22,10 @@ namespace Add_Two_Numbers
             ListNode c1 = l1;
             ListNode c2 = l2;
             ListNode result = new ListNode(0);
-            //ListNode r = result;
+            ListNode r = result;
             int sum = 0;
 
-            while(c1 != null && c2 != null)
+            while(c1 != null || c2 != null)
             {
                 int carry = sum / 10;
                 sum = carry;
@@ -42,8 +42,8 @@ namespace Add_Two_Numbers
                     c2 = c2.next;
                 }
 
-                result.next = new ListNode(sum % 10);
-                result = result.next;
+                r.next = new ListNode(sum % 10);
+                r = r.next;
             }
 
             if(sum / 10 ==1)

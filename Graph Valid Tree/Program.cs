@@ -13,7 +13,7 @@ namespace Graph_Valid_Tree
             Console.WriteLine("Hello World!");
             int[,] edges = new int[,] { { 0, 1 }, { 1, 2 }, { 2, 3 }, { 1, 3 },{ 1,4} };
 
-            Console.WriteLine(new Solution().Valid(5, edges));
+            Console.WriteLine(new Solution().ValidTree(5, edges));
         }
     }
 
@@ -22,23 +22,27 @@ namespace Graph_Valid_Tree
         int[] parents;
         public bool ValidTree(int n, int[,] edges)
         {
-            int edgeCount = edges.Length / 2;
-
-            if (edgeCount != n - 1) return false;
             parents = new int[n];
-            for (int i = 0; i < n; i++) parents[i] = -1;
-
-            for(int i=0;i<edgeCount;i++)
+            for (int i = 0; i < n; i++)
             {
-                int ele1 = edges[i, 0];
-                int ele2 = edges[i, 1];
-
-                int f1 = Find(ele1);
-                int f2 = Find(ele2);
-                if (f1 == f2) return false;
+                parents[i] = -1;
+            }
+        
+        
+            int edgesCount = edges.Length/2;
+        
+            for(int i=0;i<edgesCount;i++){
+                int vertexL = edges[i,0];
+                int vertexR = edges[i,1];
+            
+                if(Find(vertexL) == Find(vertexR))
+                {
+                    return false;
+                }
                 else
-                    Union(ele1, ele2);
-
+                {
+                    Union(vertexL, vertexR);
+                }
             }
 
             return true;

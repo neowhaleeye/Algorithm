@@ -107,6 +107,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindDuplicate", "FindDuplic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Longest Substring Without Repeating Characters", "Longest Substring Without Repeating Characters\Longest Substring Without Repeating Characters.csproj", "{4B21E5ED-7E91-43FD-8BA6-B2310B4D5B52}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddBinary", "AddBinary\AddBinary.csproj", "{C5CFD508-BC5E-4292-A949-337A112663F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -313,6 +315,10 @@ Global
 		{4B21E5ED-7E91-43FD-8BA6-B2310B4D5B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B21E5ED-7E91-43FD-8BA6-B2310B4D5B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B21E5ED-7E91-43FD-8BA6-B2310B4D5B52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5CFD508-BC5E-4292-A949-337A112663F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5CFD508-BC5E-4292-A949-337A112663F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5CFD508-BC5E-4292-A949-337A112663F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5CFD508-BC5E-4292-A949-337A112663F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -22,7 +22,7 @@ namespace Reverse_Linked_List
             fourth.next = fifth;
 
 
-            var newNode = new Solution().reverseList(head);
+            var newNode = new Solution().ReverseList(head);
 
         }
     }
@@ -39,8 +39,8 @@ namespace Reverse_Linked_List
                 newHead = head;
                 head = next;
             }
-
             return newHead;
+           
           
         }
 
@@ -54,9 +54,8 @@ namespace Reverse_Linked_List
         private ListNode reverseList(ListNode head, ListNode newHead)
         {
             if (head == null) return newHead;
-
             ListNode next = head.next;
-            head = newHead;
+            head.next = newHead;
             return reverseList(next, head);
         }
 

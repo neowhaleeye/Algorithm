@@ -1,16 +1,16 @@
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("3SUM")]
+[assembly: AssemblyTitle("3Sum")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Australian Government")]
-[assembly: AssemblyProduct("3SUM")]
-[assembly: AssemblyCopyright("Copyright © Australian Government 2019")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("3Sum")]
+[assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a91e6e3c-1805-48e0-a306-f95307fb8cf9")]
+[assembly: Guid("23d136ec-28ad-4433-a3a8-de98a7e349c0")]
 
 // Version information for an assembly consists of the following four values:
 //

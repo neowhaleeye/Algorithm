@@ -1,50 +1,71 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _3SUM
+namespace _3Sum
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
-
-            int[] a = new int[] { -1, 0, 1, 2, -1, -4 };
-
-            new Solution().ThreeSum(a);
+            int[] arr = new int[] { -1, 0, 1, 2, -1, -4 };
+            new Solution().ThreeSum(arr);
         }
     }
 
-    class Solution
+    public class Solution
     {
         public IList<IList<int>> ThreeSum(int[] nums)
         {
-            nums = nums.OrderBy(e => e).ToArray();
-            IList<IList<int>> result = new List<IList<int>>();
-            for(int i = 0; i < nums.Length - 2; i++)
+            var ordered = nums.OrderBy(e => e).ToList();
+
+            HashSet<List<int>> result = new HashSet<List<int>>();
+
+            for (int i = 0; i < ordered.Count() - 2; i++)
             {
-                if(i==0 || (i>0 && nums[i] != nums[i-1]))
+                int first = i;
+                int second = i + 1;
+                int third = nums.Length - 1;
+
+                while(second<third)
                 {
-                    int lo = i + 1;
-                    int hi = nums.Length - 1;
-                    while(lo<hi)
+                    int firstValue = ordered[first];
+                    int secondValue = ordered[second];
+                    int thirdValue = ordered[third];
+
+                    int sumofThree = firstValue + secondValue + thirdValue;
+                    if (sumofThree == 0)
                     {
-                        int sum = nums[i] + nums[lo] + nums[hi];
-                        if(sum == 0)
-                        {
-                            List<int> combination = new List<int>();
-                            combination.AddRange(new int[] { i,lo,hi });
-                        }
-                        else if (sum<
+                        List<int> matched = new List<int>();
+                        matched.Add(firstValue);
+                        matched.Add(secondValue);
+                        matched.Add(thirdValue);
+                        result.Add(matched);
+                        second++;
+                        third--;
+                    }
+                    else if(sumofThree<0)
+                    {
+                        second++;
+                    }
+                    else
+                    {
+                        third--;
                     }
                 }
+
+
             }
+
+
+            IList<IList<int>> r = new List<IList<int>>();
+            result.ToList().ForEach(e => r.Add(e));
+
+            return r;
+
 
         }
     }
-
 }

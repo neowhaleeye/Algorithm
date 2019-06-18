@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A91E6E3C-1805-48E0-A306-F95307FB8CF9}</ProjectGuid>
+    <ProjectGuid>{23D136EC-28AD-4433-A3A8-DE98A7E349C0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_3SUM</RootNamespace>
-    <AssemblyName>3SUM</AssemblyName>
+    <RootNamespace>_3Sum</RootNamespace>
+    <AssemblyName>3Sum</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>

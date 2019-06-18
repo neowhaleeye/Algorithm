@@ -10,8 +10,8 @@ namespace Kth_Largest_Element_in_an_Array
     {
         static void Main(string[] args)
         {
-            int[] param = new int[] { 3, 2, 3, 1, 2, 4, 5, 5, 6 };
-            Console.WriteLine(findKthLargest(param, 4));
+            int[] param = new int[] {3,2,8,5,7 };
+            Console.WriteLine(findKthLargest(param, 3));
         }
 
         public static int FindKthLargest(int[] nums, int k)
@@ -40,16 +40,14 @@ namespace Kth_Largest_Element_in_an_Array
 
         }
 
-
-
         private static int findKthLargest(int[] nums, int k)
         {
             k = nums.Length - k;
             int lo = 0;
             int hi = nums.Length - 1;
-            while (lo < hi)
+            while(lo<hi)
             {
-                int j = partition(nums, lo, hi);
+                int j = partition1(nums, lo, hi);
                 if (j < k)
                 {
                     lo = j + 1;
@@ -61,6 +59,28 @@ namespace Kth_Largest_Element_in_an_Array
                 else break;
             }
             return nums[k];
+
+        }
+
+
+        //Kth Largest Element in an Array
+        // 3, 2, 3, 1, 2, 4, 5, 5, 6
+
+        private static int partition1(int[] nums, int lo, int hi)
+        {
+            int pivot = nums[hi];
+            int i = lo;
+            for (int j = lo; j < hi; j++)
+            {
+                if (nums[j] <= pivot)
+                {
+                    exchange(nums, i, j);
+                    i++;
+                }
+            }
+            exchange(nums, i, hi);
+            return i;
+
         }
 
         private static int partition(int[] a, int lo, int hi)

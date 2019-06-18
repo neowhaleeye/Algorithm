@@ -39,7 +39,9 @@ namespace Reverse_Linked_List
                 newHead = head;
                 head = next;
             }
+
             return newHead;
+          
            
           
         }
@@ -54,9 +56,11 @@ namespace Reverse_Linked_List
         private ListNode reverseList(ListNode head, ListNode newHead)
         {
             if (head == null) return newHead;
+
             ListNode next = head.next;
             head.next = newHead;
             return reverseList(next, head);
+          
         }
 
         

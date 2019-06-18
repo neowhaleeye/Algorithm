@@ -36,34 +36,24 @@ namespace Binary_Tree_Level_Order_Traversal
             if (root == null) return result;
 
             Queue<TreeNode> nodeQ = new Queue<TreeNode>();
-            Queue<int> lvlQ = new Queue<int>();
-
+          
             nodeQ.Enqueue(root);
-            lvlQ.Enqueue(0);
+          
             while (nodeQ.Count > 0)
             {
-                var node = nodeQ.Dequeue();
-                var lvl = lvlQ.Dequeue();
+                int queueCount = nodeQ.Count;
 
-                if (result.Count > lvl)
+                List<int> subVals = new List<int>();
+                for (int i = 0; i < queueCount; i++)
                 {
-                    result[lvl].Add(node.val);
-                }
-                else
-                {
-                    result.Add(new List<int>() { node.val });
+                    var node = nodeQ.Dequeue();
+                    subVals.Add(node.val);
+
+                    if (node.left != null) nodeQ.Enqueue(node.left);
+                    if (node.right != null) nodeQ.Enqueue(node.right);
                 }
 
-                if (node.left != null)
-                {
-                    nodeQ.Enqueue(node.left);
-                    lvlQ.Enqueue(lvl + 1);
-                }
-                if (node.right != null)
-                {
-                    nodeQ.Enqueue(node.right);
-                    lvlQ.Enqueue(lvl + 1);
-                }
+                result.Add(subVals);
             }
 
             return result;

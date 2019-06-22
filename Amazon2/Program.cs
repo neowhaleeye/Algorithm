@@ -15,36 +15,7 @@ namespace Amazon2
             minimumDistance(3, 3, area);
         }
 
-        public int minimumDistance(int numRows, int numColumns, int[,] area)
-        {
-            int pathCounted = 0;
-            for (int r = 0; r < numRows; r++)
-            {
-                for (int c = 0; c < numColumns; c++)
-                {
-                    if (area[r, c] == '9') break;
-                    if (area[r, c] == '1')
-                    {
-                        pathCounted++;
-                        Traverse(area, r, c, numRows, numColumns);
-                    }
-                }
-            }
-
-            return pathCounted;
-        }
-
-        private void Traverse(int[,] area, int r, int c, int numsRows, int numColumns)
-        {
-            if (r < 0 || r > numsRows || c < 0 || c > numColumns) return;
-
-            Traverse(area, r - 1, c, numsRows, numColumns);
-            Traverse(area, r + 1, c, numsRows, numColumns);
-            Traverse(area, r, c - 1, numsRows, numColumns);
-            Traverse(area, r, c + 1, numsRows, numColumns);
-
-        }
-
+    
 
 
         public static int minimumDistance(int numRows, int numColumns, int[,] area)

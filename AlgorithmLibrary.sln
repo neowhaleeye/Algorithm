@@ -143,6 +143,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prison", "Prison\Prison.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AMZ_Test1", "AMZ_Test1\AMZ_Test1.csproj", "{67EC4810-F265-4605-B9D9-0C28045E3C4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roman2Int", "Roman2Int\Roman2Int.csproj", "{94CE7CF2-8A6B-4DAB-ABED-56A7508C7E83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -417,6 +419,10 @@ Global
 		{67EC4810-F265-4605-B9D9-0C28045E3C4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67EC4810-F265-4605-B9D9-0C28045E3C4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67EC4810-F265-4605-B9D9-0C28045E3C4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94CE7CF2-8A6B-4DAB-ABED-56A7508C7E83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94CE7CF2-8A6B-4DAB-ABED-56A7508C7E83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94CE7CF2-8A6B-4DAB-ABED-56A7508C7E83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94CE7CF2-8A6B-4DAB-ABED-56A7508C7E83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

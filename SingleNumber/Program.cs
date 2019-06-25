@@ -10,7 +10,7 @@ namespace SingleNumber
     {
         static void Main(string[] args)
         {
-            new Solution().SingleNumber(new int[] { 1,4,1,4,5});
+            new Solution().SingleNumber(new int[] { 1,4,1,4,5,6,6});
         }
     }
 

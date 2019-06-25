@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace DesignHash
 {
+    //https://www.hackerearth.com/practice/data-structures/hash-tables/basics-of-hash-tables/tutorial/
+
     class Program
     {
         static void Main(string[] args)

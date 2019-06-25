@@ -15,6 +15,9 @@ namespace Amazon2
             minimumDistance(3, 3, area);
         }
 
+    
+
+
         public static int minimumDistance(int numRows, int numColumns, int[,] area)
         {
 

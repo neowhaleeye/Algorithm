@@ -20,6 +20,8 @@ namespace Two_Sum
         {
             System.Collections.Hashtable hash = new System.Collections.Hashtable();
 
+            Dictionary<int, int> ha = new Dictionary<int, int>();
+
             for (int i = 0; i < nums.Length; i++)
             {
                 int element = nums[i];

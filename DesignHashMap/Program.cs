@@ -37,7 +37,8 @@ namespace DesignHash
 
     class MyHashMap
     {
-        public ListNode[] bucketList = new ListNode[1000];
+        // use prime number to avoid coalission. 
+        public ListNode[] bucketList = new ListNode[2333];
         public void Put(int key, int value)
         {
             int bucketIndex = Index(key);

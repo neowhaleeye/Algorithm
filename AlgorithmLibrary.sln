@@ -153,6 +153,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Letter Combinations of a Ph
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleHashTable", "SimpleHashTable\SimpleHashTable.csproj", "{4BC26080-F2BC-49B1-9F9D-8D2C798D787D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trapping Rain Water", "Trapping Rain Water\Trapping Rain Water.csproj", "{F4629423-F5B1-48F3-A056-394793111DF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Copy List with Random Pointer", "ConsoleApp1\Copy List with Random Pointer.csproj", "{DCB58CF9-B17E-4D99-9606-A18E22A714E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -447,6 +451,14 @@ Global
 		{4BC26080-F2BC-49B1-9F9D-8D2C798D787D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BC26080-F2BC-49B1-9F9D-8D2C798D787D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BC26080-F2BC-49B1-9F9D-8D2C798D787D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4629423-F5B1-48F3-A056-394793111DF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4629423-F5B1-48F3-A056-394793111DF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4629423-F5B1-48F3-A056-394793111DF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4629423-F5B1-48F3-A056-394793111DF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCB58CF9-B17E-4D99-9606-A18E22A714E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCB58CF9-B17E-4D99-9606-A18E22A714E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCB58CF9-B17E-4D99-9606-A18E22A714E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCB58CF9-B17E-4D99-9606-A18E22A714E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

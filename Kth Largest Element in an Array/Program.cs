@@ -47,18 +47,21 @@ namespace Kth_Largest_Element_in_an_Array
             int hi = nums.Length - 1;
             while(lo<hi)
             {
-                int j = partition1(nums, lo, hi);
-                if (j < k)
+                int partitionPnt = partition1(nums, lo, hi);
+                if (partitionPnt < k)
                 {
-                    lo = j + 1;
+                    lo = partitionPnt + 1;
                 }
-                else if (j > k)
+                else if (partitionPnt > k)
                 {
-                    hi = j - 1;
+                    hi = partitionPnt - 1;
                 }
                 else break;
             }
+
             return nums[k];
+
+
 
         }
 
@@ -69,17 +72,21 @@ namespace Kth_Largest_Element_in_an_Array
         private static int partition1(int[] nums, int lo, int hi)
         {
             int pivot = nums[hi];
-            int i = lo;
-            for (int j = lo; j < hi; j++)
+            int slow = lo;
+            for(int fast=lo; fast<hi;fast++)
             {
-                if (nums[j] <= pivot)
+                if(nums[fast]<=pivot)
                 {
-                    exchange(nums, i, j);
-                    i++;
+                    exchange(nums, fast, slow);
+                    slow++;
                 }
             }
-            exchange(nums, i, hi);
-            return i;
+            exchange(nums, slow, hi);
+            return slow;
+
+
+
+
 
         }
 

@@ -110,6 +110,36 @@ namespace DesignHash
         }
     }
 
+
+
+    class HashTest
+    {
+        const int bucket = 1000;
+        const int ItemsInBucket = 1000;
+        bool[,] Map;
+        public HashTest()
+        {
+            Map = new bool[bucket, ItemsInBucket];
+        }
+
+        public int Hash(int key)
+        {
+            return key % 1003;
+        }
+
+        public int Position(int key)
+        {
+            return key / 1003;
+        }
+
+        public void Add(int key)
+        {
+            int index = Hash(key);
+            Map[index, Position(key)] = true;
+        }
+
+    }
+
     class MyHashSet
     {
         public const int bucket = 1000;

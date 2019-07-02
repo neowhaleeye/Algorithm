@@ -10,13 +10,112 @@ namespace Word_Ladder_2
     {
         static void Main(string[] args)
         {
-            new Solution().FindLadders("hit", "cog", new string[] { "hot", "dot", "dog", "lot", "log", "cog"});
+            new Solution().FindLadders1("hit", "cog", new string[] { "hot", "dot", "dog", "lot", "log", "cog"});
         }
     }
 
     public class Solution
     {
-        public IList<IList<string>> FindLadders(string beginWord, string endWord, IList<string> wordList)
+        public IList<IList<string>> FindLadders1(string beginWord, string endWord, IList<string> wordList)
+        {
+            HashSet<string> dict = new HashSet<string>(wordList);
+            Dictionary<string, List<string>> neighbours = new Dictionary<string, List<string>>();
+            Dictionary<string, int> distances = new Dictionary<string, int>();
+            dict.Add(beginWord);
+
+            Bfs(beginWord, endWord, dict, neighbours, distances);
+            List<string> solutions = new List<string>();
+            List<List<string>> res = new List<List<string>>();
+            dfs(beginWord, endWord, dict, neighbours, distances, solutions, res);
+                
+
+            return null;
+
+        }
+
+        private void dfs(String cur, String end, HashSet<String> dict, Dictionary<String, List<String>> nodeNeighbors, Dictionary<String, int> distance, List<String> solution, List<List<String>> res)
+        {
+            solution.Add(cur);
+            if (end.Equals(cur))
+            {
+                res.Add(new List<String>(solution));
+            }
+            else
+            {
+                foreach (String next in nodeNeighbors[cur])
+                {
+                    if (distance[next] == distance[cur] + 1)
+                    {
+                        dfs(next, end, dict, nodeNeighbors, distance, solution, res);
+                    }
+                }
+            }
+            solution.RemoveAt(solution.Count - 1);
+        }
+
+
+        private void Bfs(string beginWord, string endWord, HashSet<string> dict, Dictionary<string, List<string>> neighbours, Dictionary<string, int> distance)
+        {
+            foreach(string s in dict)
+            {
+                neighbours.Add(s, new List<string>());
+            }
+
+            Queue<string> queue = new Queue<string>();
+            queue.Enqueue(beginWord);
+            distance.Add(beginWord, 0);
+            
+            while(queue.Count>0)
+            {
+                int count = queue.Count;
+                bool found = false;
+
+                for(int i=0;i<count;i++)
+                {
+                    string cur = queue.Dequeue();
+                    int curDist = distance[cur];
+                    List<string> neighboureNodes = GetNeighbours(cur, dict);
+
+                    foreach (string n in neighboureNodes)
+                    {
+                        neighbours[cur].Add(n);
+                        if (!distance.ContainsKey(n))
+                        {
+                            distance.Add(n, curDist + 1);
+                            if (n == endWord) found = true;
+                            else queue.Enqueue(n);
+                        }
+                    }
+
+                    if (found) break;
+                }
+            }
+
+        }
+
+        private List<string> GetNeighbours(string node, HashSet<string> dict)
+        {
+            List<string> res = new List<string>();
+            char[] chs = node.ToCharArray();
+
+            for(char ch='a';ch<='z';ch++)
+            {
+                for(int i=0;i< chs.Length;i++)
+                {
+                    if (chs[i] == ch) continue;
+                    char old_ch = chs[i];
+                    chs[i] = ch;
+                    if(dict.Contains(new string(chs)))
+                    {
+                        res.Add(new string(chs));
+                    }
+                    chs[i] = old_ch;
+                }
+            }
+            return res;
+        }
+
+            public IList<IList<string>> FindLadders(string beginWord, string endWord, IList<string> wordList)
         {
 
             IList<IList<string>> ladders = new List<IList<string>>();

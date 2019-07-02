@@ -124,12 +124,12 @@ namespace DesignHash
 
         public int Hash(int key)
         {
-            return key % 1003;
+            return key % bucket;
         }
 
         public int Position(int key)
         {
-            return key / 1003;
+            return key / bucket;
         }
 
         public void Add(int key)

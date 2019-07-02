@@ -11,12 +11,31 @@ namespace Subset
         static void Main(string[] args)
         {
             int[] a = new int[] { 1, 2, 3 };
-            var v = new Solution().Subsets(a);
+            var v = new Solution().subsets(a);
         }
     }
 
     public class Solution
     {
+        public List<List<int>> subsets(int[] nums)
+        {
+            List<List<int>> list = new List<List<int>>();
+            backtrack(list, new List<int>(), nums, 0);
+            return list;
+        }
+
+        private void backtrack(List<List<int>> list, List<int> tempList, int[] nums, int start)
+        {
+            list.Add(new List<int>(tempList));
+            for (int i = start; i < nums.Length; i++)
+            {
+                tempList.Add(nums[i]);
+                backtrack(list, tempList, nums, i + 1);
+                tempList.RemoveAt(tempList.Count - 1);
+            }
+        }
+
+
         public IList<IList<int>> Subsets(int[] nums)
         {
             return helper(nums, new List<IList<int>>(), 0);

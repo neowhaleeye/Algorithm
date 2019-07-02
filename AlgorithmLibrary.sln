@@ -157,6 +157,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trapping Rain Water", "Trap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Copy List with Random Pointer", "ConsoleApp1\Copy List with Random Pointer.csproj", "{DCB58CF9-B17E-4D99-9606-A18E22A714E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlienDictionary", "AlienDictionary\AlienDictionary.csproj", "{368BDA8A-D1E6-4C8F-A0AE-AC0AFC1454CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordLadder", "WordLadder\WordLadder.csproj", "{4B46C034-C518-4FB7-B95F-ED8296FD180F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -459,6 +463,14 @@ Global
 		{DCB58CF9-B17E-4D99-9606-A18E22A714E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCB58CF9-B17E-4D99-9606-A18E22A714E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCB58CF9-B17E-4D99-9606-A18E22A714E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{368BDA8A-D1E6-4C8F-A0AE-AC0AFC1454CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{368BDA8A-D1E6-4C8F-A0AE-AC0AFC1454CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{368BDA8A-D1E6-4C8F-A0AE-AC0AFC1454CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{368BDA8A-D1E6-4C8F-A0AE-AC0AFC1454CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B46C034-C518-4FB7-B95F-ED8296FD180F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B46C034-C518-4FB7-B95F-ED8296FD180F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B46C034-C518-4FB7-B95F-ED8296FD180F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B46C034-C518-4FB7-B95F-ED8296FD180F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

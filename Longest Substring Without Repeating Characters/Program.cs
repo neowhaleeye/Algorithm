@@ -11,7 +11,7 @@ namespace Longest_Substring_Without_Repeating_Characters
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Console.WriteLine(new Solution().LengthOfLongestSubstring("abcabcotpq"));
+            Console.WriteLine(new Solution().LengthOfLongestSubstring("abcced"));
         }
     }
 

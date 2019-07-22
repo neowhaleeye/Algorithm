@@ -27,25 +27,16 @@ namespace Validate_Binary_Search_Tree
 
         public static  bool IsValidBST(TreeNode root)
         {
-            if(root != null && root.left != null)
-            {
-                bool isValid = IsValidBST(root.left);
-                if (!isValid) return false;
-                if(root.val <= root.left.val)
-                {
-                    return false;
-                }
-            }
-            if(root != null && root.right != null)
-            {
-                bool isValid = IsValidBST(root.right);
-                if (!isValid) return false;
-                if (root.val >= root.right.val)
-                {
-                    return false;
-                }
-            }
-            return true;
+            return Helper(root, null, null);
+        }
+
+        private static bool Helper(TreeNode n, int? minValue, int? maxValue)
+        {
+            if (n == null) return true;
+            
+            if ( ( maxValue.HasValue && n.val >= maxValue.Value) || ( minValue.HasValue && n.val <= minValue.Value) ) return false;
+
+            return Helper(n.left, minValue, n.val) && Helper(n.right, n.val, maxValue);
         }
 
         public bool isValidBST2(TreeNode root)

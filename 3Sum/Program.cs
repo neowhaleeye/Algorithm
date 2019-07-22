@@ -21,6 +21,7 @@ namespace _3Sum
         {
             var ordered = nums.OrderBy(e => e).ToList();
 
+            
             HashSet<List<int>> result = new HashSet<List<int>>();
 
             for (int i = 0; i < ordered.Count() - 2; i++)

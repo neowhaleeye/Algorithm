@@ -12,7 +12,43 @@ namespace FindDuplicate
         {
             //Console.WriteLine(FindDuplicate(new int[] { 1, 3, 4, 2, 2 }));
 
-            repeatedNumber(new List<int>() { 1,3,4,2,2});
+            //repeatedNumber(new List<int>() { 1, 3, 4, 2, 2 });
+
+            int[] list = new int[] { 1, 2, 3, 1 };
+            //Console.WriteLine(Naive(list));
+
+            Console.WriteLine(Naive2(list, 3));
+
+
+        }
+
+        private static bool Naive2(int[] nums, int k)
+        {
+            for (int i = 0; i < nums.Length; i++)
+            {
+                for (int j = Math.Max(i-k,0); j < i; j++)
+                {
+                    if (nums[i] == nums[j]) return true;
+                }
+
+            }
+            return false;
+
+
+            
+        }
+
+        private static bool Naive(int[] nums)
+        {
+            for (int i = 0; i < nums.Length; i++)
+            {
+                for (int j = 0; j < i; j++)
+                {
+                    if (nums[i] == nums[j]) return true;
+                }
+
+            }
+            return false;
         }
 
         public static int FindDuplicate(int[] nums)
